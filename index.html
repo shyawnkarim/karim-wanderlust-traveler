@@ -144,31 +144,24 @@
 
     // onSuccess Geolocation
     //
-    function onGeoSuccess(position) {
-			lat = position.coords.latitude;
-			lon = position.coords.longitude;
-			var currentposition = new google.maps.LatLng(lat,lon);
-			
-			var mapoptions = {
-				zoom: 12,
-				center: currentposition,
-				mapTypeId: google.maps.MapTypeId.ROADMAP
-			};
-			
-			var map = new google.maps.Map(document.getElementById("map"), mapoptions);
-			
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                            'Longitude: '          + position.coords.longitude             + '<br />' +
+                            'Altitude: '           + position.coords.altitude              + '<br />' +
+                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                            'Heading: '            + position.coords.heading               + '<br />' +
+                            'Speed: '              + position.coords.speed                 + '<br />' +
+                            'Timestamp: '          +                                   position.timestamp          + '<br />';
+    }
 
-			var marker = new google.maps.Marker({
-					position: currentposition,
-					map: map
-			});
-		}
-
-		function onGeoError(error) {
-			if(error ==1) {
-				alert('Turn on geolocation services');
-			}
-		}
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+                'message: ' + error.message + '\n');
+    }
 
     </script>
 
