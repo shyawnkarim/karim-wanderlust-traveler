@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<widget xmlns = "http://www.w3.org/ns/widgets"
-xmlns:gap = "http://phonegap.com/ns/1.0"
-id = "studentfolders.student.cascadia.edu/bit175/shyawndkarim"
-versionCode="1" 
-version = "1.0.0">
-<icon src="images/icon.png" width="114" height="114" />
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.example"
+        version   = "1.0.0">
 
-<name>WLT: St. Martin Beaches</name>
-<description>
-Browse and learn about the hottest beaches in St. Martin.
-</description>
-<author href="http://studentfolders.student.cascadia.edu/bit175/shyawndkarim/" email="shyawnkarim@gmail.com">
-Shyawn Karim
-</author>
+    <name>WLT: St. Martin Beaches</name>
+
+    <description>
+        Browse and learn about the hottest beaches in St. Martin. 
+    </description>
+
+    <author href="https://build.phonegap.com" email="shyawnkarim@gmail.com">
+        Shyawn Karim 
+    </author>
+
+    <preference name="stay-in-webview" value="true" />
+
+    <icon src="icon.png" width="114" height="114" />
+
 </widget>
